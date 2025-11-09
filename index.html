@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora científica completa con funciones de memoria e historial">
+    <title>Calculadora Científica Profesional</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <!-- Pantalla principal -->
+            <div class="display-section">
+                <div class="display">
+                    <div class="expression" id="expression">0</div>
+                    <div class="result" id="result" role="status" aria-live="polite" aria-atomic="true">0</div>
+                </div>
+                <div class="memory-indicator" id="memoryIndicator"></div>
+            </div>
+
+            <!-- Historial -->
+            <div class="history-section" id="historySection">
+                <div class="history-header">
+                    <h3>Historial</h3>
+                    <button class="clear-history-btn" id="clearHistoryBtn" title="Limpiar historial">🗑️</button>
+                </div>
+                <div class="history-list" id="historyList">
+                    <p class="no-history">Sin operaciones previas</p>
+                </div>
+            </div>
+
+            <!-- Teclado de la calculadora -->
+            <div class="keyboard">
+                <!-- Fila 1: Funciones de memoria y limpiar -->
+                <button class="btn btn-memory" data-action="memory-clear">MC</button>
+                <button class="btn btn-memory" data-action="memory-recall">MR</button>
+                <button class="btn btn-memory" data-action="memory-add">M+</button>
+                <button class="btn btn-memory" data-action="memory-subtract">M-</button>
+                <button class="btn btn-clear" data-action="clear">C</button>
+
+                <!-- Fila 2: Funciones científicas -->
+                <button class="btn btn-function" data-action="sin">sin</button>
+                <button class="btn btn-function" data-action="cos">cos</button>
+                <button class="btn btn-function" data-action="tan">tan</button>
+                <button class="btn btn-function" data-action="log">log</button>
+                <button class="btn btn-function" data-action="sqrt">√</button>
+
+                <!-- Fila 3: Funciones y operadores -->
+                <button class="btn btn-number" data-value="7">7</button>
+                <button class="btn btn-number" data-value="8">8</button>
+                <button class="btn btn-number" data-value="9">9</button>
+                <button class="btn btn-operator" data-action="divide">÷</button>
+                <button class="btn btn-function" data-action="power">x²</button>
+
+                <!-- Fila 4: Números y operadores -->
+                <button class="btn btn-number" data-value="4">4</button>
+                <button class="btn btn-number" data-value="5">5</button>
+                <button class="btn btn-number" data-value="6">6</button>
+                <button class="btn btn-operator" data-action="multiply">×</button>
+                <button class="btn btn-function" data-action="percent">%</button>
+
+                <!-- Fila 5: Números y operadores -->
+                <button class="btn btn-number" data-value="1">1</button>
+                <button class="btn btn-number" data-value="2">2</button>
+                <button class="btn btn-number" data-value="3">3</button>
+                <button class="btn btn-operator" data-action="subtract">−</button>
+                <button class="btn btn-function" data-action="reciprocal">1/x</button>
+
+                <!-- Fila 6: Números especiales y operadores -->
+                <button class="btn btn-number" data-value="0">0</button>
+                <button class="btn btn-number" data-value=".">.</button>
+                <button class="btn btn-function" data-action="negate">±</button>
+                <button class="btn btn-operator" data-action="add">+</button>
+                <button class="btn btn-equals" data-action="equals">=</button>
+            </div>
+        </div>
+    </div>
+
+        <script src="js/math.js"></script>
+        <script src="js/script.js"></script>
+</body>
+</html>
